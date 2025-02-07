@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --White: hsl(0, 0%, 100%);
+    --LightPink: hsl(275, 100%, 97%);
+    --GrayishPurple: hsl(292, 16%, 49%);
+    --DarkPurple: hsl(292, 42%, 14%);
+}
+*{
+    margin:0;
+    padding: 0;
+    font-size:16px;
+    font-family: 'Work Sans', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--LightPink);
+    color: var(--DarkPurple);
+}
+.background {
+    background-image: url(/FAQ-Accordition/assets/images/background-pattern-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.FAQ{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5rem;
+    background-color: var(--White);
+    width:auto;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 20vh 25vw;
+
+}
+.Title{
+    display: flex;
+    margin-bottom: 2rem;
+}
+h1{
+    font-weight: 700;
+    margin-left: 1rem;
+    font-size: 3rem;
+}
+.questions{
+    font-size: 1rem;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;;
+}
+.questions:last-child{
+    border-bottom: none;
+}
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.question h2{
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+p{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-right: 1rem;
+}
+
+.text{
+    display: none;
+}
+.toggle-icon.active {
+    transform: rotate(45deg); /* Rotate icon when active */
+}
+@media screen and (max-width: 400px) {
+    .FAQ {
+        margin: 5vh 10vw;
+    }
+    .background{
+        background-image: url(/FAQ-Accordition/assets/images/background-pattern-mobile.svg);
+    }
+    
+}
